@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    --Linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+    --Very-light-grayish-blue: hsl(240, 78%, 98%);
+    --Light-grayish-blue: hsl(234, 14%, 74%);
+    --Grayish-blue: hsl(233, 13%, 49%);
+    --Dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   max-width: 1440px;
+   min-width: 375px;
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif; 
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--Very-light-grayish-blue);
+    padding: 65px 0px;
+}
+
+.header {
+    margin-bottom: 75px;
+}
+
+.header h2 {
+    font-size: 2em;
+    color: var(--Grayish-blue);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.switch_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch_container p {
+    color: var(--Light-grayish-blue);
+}
+
+.checkbox {
+    display: none
+}
+
+.switch {
+    width: 62px;
+    height: 32px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 16px;
+    margin: 0px 25px;
+}
+
+.switch:before {
+    content: '';
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.switch:after {
+    content: '';
+    height: 25px;
+    width: 25px;
+    border-radius: 28px;
+    z-index: 2;
+    background: #FFFFFF;
+    position: absolute;
+    transition-duration: 300ms;
+    top: 3px;
+    left: 5px;
+    box-shadow: 0 2px 5px #999999;
+}
+
+.switchOn,
+.switchOn:before {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) ) !important;
+}
+
+.switchOn:after {
+    left: 30px !important;
+}
+
+.price_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.basic, .master {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 35px 30px;
+}
+
+.basic h3, .basic p, .master h3, .master p {
+    color: var(--Grayish-blue);
+}
+
+h1 {
+    font-size: 4em;
+}
+.basic h1, .master h1 {
+    color: var(--Dark-grayish-blue);
+}
+.professional {
+    text-align: center;
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 35px 30px;
+    color: var(--Very-light-grayish-blue);
+}
+
+button {
+    height: 45px;
+    border-radius: 8px;
+    border-style: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; 
+    letter-spacing: 2px;
+}
+
+.basic button, .master button {
+    color: var(--Very-light-grayish-blue);
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+}
+
+.basic button:hover, .master button:hover {
+    background: white;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+    cursor: pointer;
+}
+
+.professional button {
+    color: hsl(237, 63%, 64%);
+}
+
+.professional button:hover{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+.attribution {
+    background-color: var(--Very-light-grayish-blue);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 890px) {
+    .price_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .professional {
+        height: 485px;
+    }    
+
+    h1 {
+        font-size: 3.2em;
+    }
+}
